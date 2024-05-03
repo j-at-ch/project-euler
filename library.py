@@ -35,3 +35,19 @@ def prime_factors(n):  # problem 3
                 p.append(q)
         q += 1
     return p
+
+
+def is_palindrome(n):  # problem 4
+    return str(n) == str(n)[::-1]
+
+
+def search_largest_palindrome(n):  # problem 4
+    best = 1
+    for i in range(n + 1)[::-1]:
+        for j in range(n + 1)[::-1]:
+            if i * j <= best:
+                pass
+            elif is_palindrome(i * j):
+                best = i * j
+    return best
+
