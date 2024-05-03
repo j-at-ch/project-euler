@@ -1,13 +1,16 @@
 import argparse
 import numpy as np
-from library import arithmetic_sum
+
+
+def arithmetic_sum(n: int) -> int:
+    return int(0.5 * n * (n + 1))
 
 
 def solution(n):
     """
     Use inclusion exclusion together with the exact formula for arithmetic sums.
     """
-    m = n - 1
+    m = n - 1  # The question asks for less than n.
     s_3 = 3 * arithmetic_sum(np.floor(m / 3))
     s_5 = 5 * arithmetic_sum(np.floor(m / 5))
     s_15 = 15 * arithmetic_sum(np.floor(m / 15))
