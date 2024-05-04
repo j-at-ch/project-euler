@@ -30,13 +30,14 @@ def divisor_power(p, n):  # problem 5
     return i
 
 
-def known_divisor(q, factors):  # problem 5
+def has_divisor(q, factors):  # problem 5
     """Check whether q has a factor in factors."""
-    is_known = True
+    divisor_found = False
     for f in factors:
         if q % f == 0:
-            is_known = False
-    return is_known
+            divisor_found = True
+            break
+    return divisor_found
 
 
 def prime_factors(n):  # problem 5
@@ -72,4 +73,3 @@ def search_largest_palindrome(n):  # problem 4
             elif is_palindrome(i * j):
                 best = i * j
     return best
-
