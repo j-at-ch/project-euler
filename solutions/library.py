@@ -3,13 +3,13 @@ from functools import cache
 
 
 @cache
-def factorial(n):
-    return n * factorial(n-1) if n != 1 else 1
+def factorial(n: int) -> int:
+    return n * factorial(n-1) if n > 1 else 1
 
 
 @cache
-def sum_factorials(n: int):
-    return factorial(n) + sum_factorials(n - 1) if n != 1 else 1
+def sum_factorials(n: int) -> int:
+    return factorial(n) + sum_factorials(n - 1) if n > 1 else 1
 
 
 def arithmetic_sum(n: int) -> int:  # problem 1
