@@ -1,6 +1,5 @@
-import set_root
 import argparse
-from library import has_divisor
+from src.library import has_divisor
 
 
 def solution(n):

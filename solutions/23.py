@@ -1,7 +1,6 @@
-import set_root
 from tqdm import tqdm
 import argparse
-from library import divisor_sum
+from src.library import divisor_sum
 
 
 def find_abundants(n):
