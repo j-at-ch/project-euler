@@ -40,7 +40,7 @@ def has_divisor(q, factors):  # problem 5
     return divisor_found
 
 
-def prime_factors(n):  # problem 5
+def prime_powers(n):  # problem 5
     """Simple distinct prime factor tracker."""
     p = {}
     # primes are naturals greater than 2
@@ -51,7 +51,7 @@ def prime_factors(n):  # problem 5
         q = 2
         while q <= n / 2:
             if n % q == 0:
-                if known_divisor(q, p):
+                if not has_divisor(q, p):
                     p[q] = divisor_power(q, n)
             q += 1
         # no factors means that n is a prime
@@ -73,3 +73,12 @@ def search_largest_palindrome(n):  # problem 4
             elif is_palindrome(i * j):
                 best = i * j
     return best
+
+
+def divisor_sum(n: int) -> int:
+    powers = prime_powers(n)
+    s = 1
+    for p in powers:
+        s *= (p ** (powers[p] + 1) - 1) / (p - 1)
+    d = s - n
+    return int(d)
