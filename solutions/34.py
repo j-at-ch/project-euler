@@ -1,3 +1,4 @@
+import set_root
 import argparse
 import numpy as np
 from library import factorial
