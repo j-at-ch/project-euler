@@ -1,5 +1,5 @@
 # project-euler
 
-This repo logs my solutions to the [Project Euler](https://projecteuler.net/archives) problems.
+This repo tracks my progress on [Project Euler](https://projecteuler.net/archives) problems. The aim is an average of 1 per day for the first 50.
 
-In accordance with the Project Euler rules, only solutions up to and including the 100th problem will appear here.
+Only solutions up to and including the 100th problem will appear here (as per Project Euler rules).
