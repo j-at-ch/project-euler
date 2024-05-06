@@ -1,5 +1,12 @@
 # project-euler
 
-This repo tracks my progress on [Project Euler](https://projecteuler.net/archives) problems. The aim is an average of 1 per day for the first 50.
+This repo tracks my progress on [Project Euler](https://projecteuler.net/archives) problems.
 
-Only solutions up to and including the 100th problem will appear here (as per Project Euler rules).
+Only solutions up to and including the 100th problem will appear here (Project Euler rules).
+
+
+**Current progress:** 
+
+| Days  | Solved   | 
+|:-----:|:--------:| 
+| 4     | 14       |
