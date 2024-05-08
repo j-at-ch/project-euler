@@ -1,1 +1,4 @@
 .idea
+solutions
+!solutions/0**.py
+!solutions/100.py
