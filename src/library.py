@@ -81,3 +81,12 @@ def divisor_sum(n: int) -> int:
         s *= (p ** (powers[p] + 1) - 1) / (p - 1)
     d = s - n
     return int(d)
+
+
+def n_divisors(n: int) -> int:
+    powers = prime_powers(n)
+    s = 1
+    for p in powers:
+        s *= (powers[p] + 1)
+    d = s - 1
+    return int(d)
