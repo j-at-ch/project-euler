@@ -4,7 +4,7 @@ import argparse
 
 def solution(n):
     """Maybe this was difficult at time of writing? [shrug]"""
-    with open('data/0013.txt', 'r') as f:
+    with open('data/013.txt', 'r') as f:
         numbers = [int(n) for n in f.read().split('\n')]
     s = sum(numbers)
     first_n_digits = str(s)[0:n]

@@ -41,7 +41,7 @@ def solution(path):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Problem 42: Coded Triangle Numbers')
-    parser.add_argument('--path', type=str, default='data/0042_words.txt')
+    parser.add_argument('--path', type=str, default='data/042.txt')
     args = parser.parse_args()
 
     problem = 42
