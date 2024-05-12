@@ -1,3 +1,4 @@
+import set_root
 from tqdm import tqdm
 import argparse
 from src.library import divisor_sum
