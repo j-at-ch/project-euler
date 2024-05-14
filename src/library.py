@@ -16,8 +16,9 @@ def arithmetic_sum(n: int) -> int:  # problem 1
 
 
 @cache
-def fib(m):  # problem 2
-    return fib(m - 1) + fib(m - 2) if m > 2 else m
+def fibonacci(m):
+    assert m >= 0
+    return fibonacci(m - 1) + fibonacci(m - 2) if m > 2 else 1
 
 
 def divisor_power(p, n):  # problem 5
