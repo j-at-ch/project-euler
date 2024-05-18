@@ -72,8 +72,8 @@ def prime_powers(n):  # problem 5
     return p
 
 
-def is_palindrome(n):  # problem 4
-    return str(n) == str(n)[::-1]
+def is_palindrome(n: str) -> bool:
+    return n == n[::-1]
 
 
 def search_largest_palindrome(n):  # problem 4
