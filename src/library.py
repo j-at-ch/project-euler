@@ -1,5 +1,6 @@
 from functools import cache
 import numpy as np
+from typing import Tuple
 
 
 @cache
@@ -102,3 +103,23 @@ def n_divisors(n: int) -> int:
         s *= (powers[p] + 1)
     d = s - 1
     return int(d)
+
+
+def reduce_fraction(numerator: int, denominator: int) -> Tuple[int, int]:
+    npp = prime_powers(numerator)
+    dpp = prime_powers(denominator)
+
+    n = 1
+    d = 1
+
+    all_primes = set(list(npp) + list(dpp))
+    for p in all_primes:
+        if (p in npp) and (p in dpp):
+            n *= p ** max(0, npp[p] - dpp[p])
+            d *= p ** max(0, dpp[p] - npp[p])
+        elif p in npp:
+            n *= p ** npp[p]
+        else:
+            d *= p ** dpp[p]
+
+    return n, d
