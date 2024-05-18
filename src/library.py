@@ -44,11 +44,14 @@ def has_divisor(q, factors):  # problem 5
 
 def is_prime(q):
     """Check whether is a prime"""
-    is_p = True
-    for f in range(2, int(np.sqrt(q)) + 1):
-        if q % f == 0:
-            is_p = False
-            break
+    if q < 2:
+        is_p = False
+    else:
+        is_p = True
+        for f in range(2, int(np.sqrt(q)) + 1):
+            if q % f == 0:
+                is_p = False
+                break
     return is_p
 
 
