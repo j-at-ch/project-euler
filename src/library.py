@@ -75,6 +75,26 @@ def prime_powers(n):  # problem 5
     return p
 
 
+def distinct_prime_powers(n):  # problem 5
+    """Simple distinct prime factor tracker."""
+    p = []
+    # primes are naturals greater than 2
+    if n < 2:
+        pass
+    else:
+        # test for factors
+        q = 2
+        while q <= n / 2:
+            if n % q == 0:
+                if not has_divisor(q, p):
+                    p.append(q)
+            q += 1
+        # no factors means that n is a prime
+        if len(p) == 0:
+            p = {n: 1}
+    return p
+
+
 def is_palindrome(n: str) -> bool:
     return n == n[::-1]
 
@@ -126,3 +146,15 @@ def reduce_fraction(numerator: int, denominator: int) -> Tuple[int, int]:
             d *= p ** dpp[p]
 
     return n, d
+
+
+def triangle(n):
+    return n * (n + 1) // 2
+
+
+def pentagon(n):
+    return n * (3 * n - 1) // 2
+
+
+def hexagon(n):
+    return n * (2 * n - 1)
