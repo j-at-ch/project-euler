@@ -91,7 +91,7 @@ def distinct_prime_powers(n):  # problem 5
             q += 1
         # no factors means that n is a prime
         if len(p) == 0:
-            p = {n: 1}
+            p = [n]
     return p
 
 
