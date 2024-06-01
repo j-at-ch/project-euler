@@ -23,8 +23,6 @@ def solution(n, t):
             break
         i += 1
 
-        if i % 1000 == 0:
-
         if time.time() - start > t:
             print('Timeout!')
             break
