@@ -95,6 +95,35 @@ def distinct_prime_powers(n):  # problem 5
     return p
 
 
+def distinct_prime_powers2(n):
+    """Simple distinct prime factor tracker."""
+    p = []
+    k = n
+    # primes are naturals greater than 2
+    if n < 2:
+        pass
+    else:
+        # test for factors
+        q = 2
+        while k > 1:
+            is_factor = False
+            power = 0
+            while k % q == 0:
+                k = k // q
+                is_factor = True
+                power += 1
+            if is_factor:
+                p.append(q)
+            if q == 2:
+                q += 1
+            else:
+                q += 2
+        # no factors means that n is a prime
+        if len(p) == 0:
+            p = [n]
+    return p
+
+
 def is_palindrome(n: str) -> bool:
     return n == n[::-1]
 
