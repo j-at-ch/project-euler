@@ -1,14 +1,13 @@
 import argparse
 
 
-def solution(d, n):
+def solution(denominations, n):
     """Bottom-up dynamic programming approach"""
     s = [0 for k in range(n + 1)]
     s[0] = 1
-
-    for i in range(0, len(d)):
-        for j in range(d[i], n + 1):
-            s[j] += s[j - d[i]]
+    for d in denominations:
+        for j in range(d, n + 1):
+            s[j] += s[j - d]
     return s[n]
 
 
