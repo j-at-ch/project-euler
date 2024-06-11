@@ -13,10 +13,6 @@ def sum_factorials(n: int) -> int:
     return factorial(n) + sum_factorials(n - 1) if n > 1 else 1
 
 
-def arithmetic_sum(n: int) -> int:  # problem 1
-    return int(0.5 * n * (n + 1))
-
-
 @cache
 def fibonacci(m):
     assert m >= 0
@@ -181,9 +177,24 @@ def triangle(n):
     return n * (n + 1) // 2
 
 
+def square(n):
+    return n ** 2
+
+
 def pentagon(n):
     return n * (3 * n - 1) // 2
 
 
 def hexagon(n):
     return n * (2 * n - 1)
+
+
+def heptagon(n):
+    return n * (5 * n - 3) // 2
+
+
+def octagon(n):
+    return n * (3 * n - 2)
+
+
+
