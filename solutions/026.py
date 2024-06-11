@@ -1,11 +1,9 @@
 import set_root
 import argparse
 import numpy as np
-from src.library import factorial
 
 
 def solution(n):
-    """Get ordinal index of first fibonacci number with at least 1000 digits"""
     denom = 1
     max_period = 0
     for i in range(2, n + 1):
