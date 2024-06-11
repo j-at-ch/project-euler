@@ -192,8 +192,8 @@ def surd_continued_fraction(s):
     while True:
         m = d * a - m
         d = (s - m ** 2) / d
-        a = int((l[0] + m) / d)
+        a = int((rep[0] + m) / d)
         rep.append(a)
-        if a == 2 * l[0]:
+        if a == 2 * rep[0]:
             break
     return rep
