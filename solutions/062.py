@@ -32,7 +32,7 @@ def solution(n):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser('Problem 62: ')
+    parser = argparse.ArgumentParser('Problem 62: Cubic Permutations')
     parser.add_argument('--n', type=int, default=5)
     args = parser.parse_args()
 
