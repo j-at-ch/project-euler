@@ -71,27 +71,7 @@ def prime_powers(n):  # problem 5
     return p
 
 
-def distinct_prime_powers(n):  # problem 5
-    """Simple distinct prime factor tracker."""
-    p = []
-    # primes are naturals greater than 2
-    if n < 2:
-        pass
-    else:
-        # test for factors
-        q = 2
-        while q <= n / 2:
-            if n % q == 0:
-                if not has_divisor(q, p):
-                    p.append(q)
-            q += 1
-        # no factors means that n is a prime
-        if len(p) == 0:
-            p = [n]
-    return p
-
-
-def distinct_prime_powers2(n):
+def distinct_prime_powers(n):
     """Simple distinct prime factor tracker."""
     p = []
     k = n
@@ -197,4 +177,23 @@ def octagon(n):
     return n * (3 * n - 2)
 
 
+def surd_continued_fraction(s):
+    """Find the continued fraction representation of sqrt(s)."""
+    surd = np.sqrt(s)
+    if surd - int(surd) == 0:
+        return [int(surd)]
 
+    rep = []
+    a = int(np.sqrt(s))
+    rep.append(a)
+
+    m = 0
+    d = 1
+    while True:
+        m = d * a - m
+        d = (s - m ** 2) / d
+        a = int((l[0] + m) / d)
+        rep.append(a)
+        if a == 2 * l[0]:
+            break
+    return rep
