@@ -197,3 +197,13 @@ def surd_continued_fraction(s):
         if a == 2 * rep[0]:
             break
     return rep
+
+
+def totient(n):
+    pp = distinct_prime_powers(n)
+    t = n
+    for p in pp:
+        t *= p - 1
+    for p in pp:
+        t //= p
+    return t
