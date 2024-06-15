@@ -40,15 +40,25 @@ def has_divisor(q, factors):  # problem 5
 
 def is_prime(q):
     """Check whether is a prime"""
-    if q < 2:
-        is_p = False
+    if q <= 1:
+        return False
+    elif q < 4:
+        return True
+    elif q % 2 == 0:
+        return False
+    elif q < 9:
+        return True
+    elif q % 3 == 0:
+        return False
     else:
-        is_p = True
-        for f in range(2, int(np.sqrt(q)) + 1):
-            if q % f == 0:
-                is_p = False
-                break
-    return is_p
+        max_factor = int(np.sqrt(q))
+        a = 5
+        while a <= max_factor:
+            if q % a == 0 or q % (a + 2) == 0:
+                return False
+            else:
+                a += 6
+        return True
 
 
 def prime_powers(n):  # problem 5
