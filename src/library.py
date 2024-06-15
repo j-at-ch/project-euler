@@ -207,3 +207,14 @@ def totient(n):
     for p in pp:
         t //= p
     return t
+
+
+def gcd(a, b):
+    """Find the greatest common divisor (hcf) of a and b using the Euclidean algorithm"""
+    while True:
+        if b > a:
+            a, b = b, a
+        a = a % b
+        b = b
+        if a == 0:
+            return b
