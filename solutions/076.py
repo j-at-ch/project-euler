@@ -13,7 +13,7 @@ def solution(n):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser('Problem 76: ')
+    parser = argparse.ArgumentParser('Problem 76: Counting Summations')
     parser.add_argument('--n', type=int, default=100)
     args = parser.parse_args()
 

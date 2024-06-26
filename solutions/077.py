@@ -4,7 +4,7 @@ from src.library import is_prime
 
 
 def solution(n):
-    """DP coin representation problem with a generous set of primes as the denominations."""
+    """DP coin representation problem with all the naturals as the set of denominations (again)."""
 
     primes = []
     for q in range(n):
@@ -19,13 +19,13 @@ def solution(n):
         for j in range(d, n):
             s[j] += s[j - d]
 
-        if max(s[0:d]) > 5000:
+        if max(s[0:d]) > n:
             sufficient_d = d
             break
 
     out = None
     for i, q in enumerate(s[0: sufficient_d]):
-        if q > 5000:
+        if q > n:
             out = i
             break
 
@@ -34,7 +34,7 @@ def solution(n):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Problem 77: Prime Summations')
-    parser.add_argument('--n', type=int, default=10**3)
+    parser.add_argument('--n', type=int, default=5000)
     args = parser.parse_args()
 
     problem = 77
