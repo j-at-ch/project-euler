@@ -228,3 +228,22 @@ def gcd(a, b):
         b = b
         if a == 0:
             return b
+
+
+@cache
+def partition(n):
+    """From `Recurrences for the partition function and its relatives` by John A Ewell.
+    This is the pentagonal recurrence relation proved by Euler.
+    """
+    if n < 0:
+        return 0
+    elif n < 2:
+        return 1
+    s = 0
+    k_max = int((np.sqrt(24 * n + 1) + 1) / 6)
+    for k in range(1, k_max + 1):
+        s += (-1) ** (k - 1) * (
+            partition(n - int((k * (3 * k - 1) / 2)))
+            + partition(n - int((k * (3 * k + 1) / 2)))
+        )
+    return s
