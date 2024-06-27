@@ -4,7 +4,10 @@ This repo tracks my progress on [Project Euler](https://projecteuler.net/archive
 
 Only solutions up to and including the 100th problem will appear here (Project Euler rules).
 
-My favourite questions so far:
+### Progress
+![<img src="j-at-ch.png">](https://projecteuler.net/profile/j-at-ch.png)
+
+### Favourites
 + [Problem 12](https://projecteuler.net/problem=12): Highly Divisible Triangular Number.
   + *Neat little one - prime number properties come in handy.*
 + [Problem 62](https://projecteuler.net/problem=62): Cubic Permutations.
