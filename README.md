@@ -17,3 +17,6 @@ Only solutions up to and including the 100th problem will appear here (Project E
 + [Problem 86](https://projecteuler.net/problem=86): Cuboid Route.
   + *This one is a gem. It took a while to crack it and get the run time down to O(n**2) but very satisfying. 
   My first solution to a 35% rated problem.*
++ [Problem 82](https://projecteuler.net/problem=82): Path Sum: Three Ways.
+  + *Really pleased to get this one. Took some thinking to find a solution that wasn't the naive O(n**n).
+  So many paths!*
