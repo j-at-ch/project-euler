@@ -1,8 +1,6 @@
 # project-euler
 
-This repo tracks my progress on [Project Euler](https://projecteuler.net/archives) problems. **Spoiler alert!**
-
-Only problems up to and including the 100th problem will appear here (Project Euler rules).
+This repo tracks my progress on [Project Euler](https://projecteuler.net/archives) problems. Only problems up to and including the 100th problem will appear here.
 
 ### Progress
 ![<img src="j-at-ch.png">](https://projecteuler.net/profile/j-at-ch.png)
