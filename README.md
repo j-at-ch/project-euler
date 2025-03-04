@@ -23,4 +23,4 @@ This repo tracks my progress on [Project Euler](https://projecteuler.net/archive
   first minute elapsed. The final version involved some DP, and finished in ~1 second.*
 
 ### First 100, complete!
-<img src="images/first_100.png" width="608" alt="Full 10 x 10 grid of PE problem numbers demonstrating completion of the first 100 problems."/>
+<img src="images/first_100.png" width="300" alt="Full 10 x 10 grid of PE problem numbers demonstrating completion of the first 100 problems."/>
